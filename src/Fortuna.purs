@@ -37,5 +37,5 @@ randomBytes n = map (Bytes <<< buffer) (_randomBytes n)
 --     r <- (_randomBytes n)
 --     pure $ Bytes r
 
--- randomInt -> Int -> Int -> Int
--- randomInt from to = 
+randomInt -> Int -> Int -> Int
+randomInt from to = 

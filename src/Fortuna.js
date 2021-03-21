@@ -4,21 +4,42 @@ function _randomByte () {
     return Math.floor(Math.random() * 256);
 }
 
-function _randomBytes (n) {
-    let result = new Uint8Array(n);  
+// ============================================================================
 
-    for (i=0; i<n; i++) {
-        result[i] = _randomByte();
+exports._randomBytes = (n) => (onError, onSuccess) => {
+    let result = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            var i;
+            let result = new Uint8Array(n);  
+
+            for (i=0; i<n; i++) {
+                result[i] = _randomByte();
+            }
+
+            resolve(result);
+        }, 500);
+    });
+
+    result.then(onSuccess).catch(onError);
+    return (cancelError, cancelerError, cancelerSuccess) => {
+      // Handle however you'd cancel the `o` (if the API supports it)
     }
-
-    return result;
 }
 
-function _initPRNG () {
-    console.log("INIT PRNG");
-}
+// ============================================================================
 
-exports._randomBytes = _randomBytes;
-exports._initPRNG = _initPRNG;
+exports._initPRNG = (onError, onSuccess) => {
+    let result = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("INIT PRNG");
+            resolve();
+        }, 500);
+    })
 
-// _initPRNG();
+    result.then(onSuccess).catch(onError);
+    return (cancelError, cancelerError, cancelerSuccess) => {
+      // Handle however you'd cancel the `o` (if the API supports it)
+    }
+}    
+
+// ============================================================================

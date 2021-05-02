@@ -5,6 +5,7 @@ function _randomByte () {
 }
 
 // ============================================================================
+const gratuitousTimeout = 2000;
 
 exports._randomBytes = (n) => (onError, onSuccess) => {
     let result = new Promise((resolve, reject) => {
@@ -17,7 +18,7 @@ exports._randomBytes = (n) => (onError, onSuccess) => {
             }
 
             resolve(result);
-        }, 500);
+        }, gratuitousTimeout);
     });
 
     result.then(onSuccess).catch(onError);
@@ -33,7 +34,7 @@ exports._initPRNG = (onError, onSuccess) => {
         setTimeout(() => {
             console.log("INIT PRNG");
             resolve();
-        }, 500);
+        }, gratuitousTimeout);
     })
 
     result.then(onSuccess).catch(onError);

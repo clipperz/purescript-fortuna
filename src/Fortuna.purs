@@ -28,3 +28,7 @@ randomBytes :: Int -> Aff Bytes
 randomBytes n = map Bytes $ fromEffectFnAff (_randomBytes n)
 
 -- # Example on how to bind a JS Async API into Aff: https://github.com/kritzcreek/bind-aff-example
+
+
+-- randomBytesEffect :: Int -> Effect Bytes
+-- randomBytesEffect n = map Bytes $ fromEffectFnAff 

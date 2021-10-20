@@ -6,6 +6,7 @@ function _randomByte () {
 
 // ============================================================================
 const gratuitousTimeout = 2000;
+// const gratuitousTimeout = 500;
 
 exports._randomBytes = (n) => (onError, onSuccess) => {
     let result = new Promise((resolve, reject) => {

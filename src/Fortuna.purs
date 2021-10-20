@@ -17,7 +17,7 @@ import Effect.Class (liftEffect)
 import Bytes (Bytes(..))
 -- type Bytes = Uint8Array
 
-foreign import _initPRNG    :: EffectFnAff Unit
+foreign import _initPRNG :: EffectFnAff Unit
 initPRNG :: Aff Unit
 initPRNG = fromEffectFnAff _initPRNG
 
@@ -32,3 +32,7 @@ randomBytes n = map Bytes $ fromEffectFnAff (_randomBytes n)
 
 -- randomBytesEffect :: Int -> Effect Bytes
 -- randomBytesEffect n = map Bytes $ fromEffectFnAff 
+
+-- ========================================================================
+
+-- data State = { key: }

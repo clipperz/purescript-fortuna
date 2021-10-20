@@ -1,6 +1,8 @@
 module Bytes where
 
 import Data.Show (class Show)
+import Data.ArrayBuffer.DataView (buffer)
+-- import Data.ArrayBuffer.Typed (buffer)
 import Data.ArrayBuffer.Types (ArrayBuffer, Uint8Array, Uint8)
 
 foreign import _showBytes :: Uint8Array -> String
@@ -21,3 +23,8 @@ instance showBytes :: Show Bytes where
 foreign import _foldMapBytesToString :: (Byte -> String) -> Bytes -> String
 foldMapBytesToString :: (Byte -> String) -> Bytes -> String
 foldMapBytesToString f bytes = _foldMapBytesToString f bytes
+
+foreign import _typedArrayToBuffer :: Uint8Array -> ArrayBuffer
+asArrayBuffer :: Bytes -> ArrayBuffer
+-- asArrayBuffer (Bytes a) = buffer a
+asArrayBuffer (Bytes a) = _typedArrayToBuffer a

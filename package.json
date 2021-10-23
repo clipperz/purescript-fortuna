@@ -1,10 +1,10 @@
 {
     "license": "AGPL-3.0-or-later",
     "engines": {
-        "yarn": "1.22.10"
+        "yarn": "1.22.5"
     },
     "devDependencies": {
-        "purescript": "0.14.2",
+        "purescript": "0.14.4",
         "spago": "0.20.3"
     }
 }

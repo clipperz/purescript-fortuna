@@ -762,10 +762,10 @@ purescript-installer@^0.2.0:
     which "^1.3.1"
     zen-observable "^0.8.14"
 
-purescript@0.14.2:
-  version "0.14.2"
-  resolved "https://registry.yarnpkg.com/purescript/-/purescript-0.14.2.tgz#6c42c941c014c23991d7782bbaa71f1ee73aa290"
-  integrity sha512-kEXY5yUaG8a1FNN/IdtfNl4gcql7p76CPqnanMZ37GdtBZTcFK/SB24bp2rOAT1/N9qU8/corlra6uNf4+5pgQ==
+purescript@0.14.4:
+  version "0.14.4"
+  resolved "https://registry.yarnpkg.com/purescript/-/purescript-0.14.4.tgz#16096b589a5c81aa5813c805dc16c0b9f5b7a854"
+  integrity sha512-9Lq2qvyVkQoKUBSNOEBKIJjtD5sDwThurSt3SRdtSseaA03p1Fk7VxbUr9HV/gHLVZPIkOhPtjvZGUNs5U2PDA==
   dependencies:
     purescript-installer "^0.2.0"
 

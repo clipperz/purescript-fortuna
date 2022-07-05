@@ -8,7 +8,7 @@ function _randomByte () {
 const gratuitousTimeout = 100;
 // const gratuitousTimeout = 500;
 
-exports._randomBytes = (n) => (onError, onSuccess) => {
+function _randomBytes(n) { return (onError, onSuccess) => {
     let result = new Promise((resolve, reject) => {
         setTimeout(() => {
             var i;
@@ -26,11 +26,11 @@ exports._randomBytes = (n) => (onError, onSuccess) => {
     return (cancelError, cancelerError, cancelerSuccess) => {
       // Handle however you'd cancel the `o` (if the API supports it)
     }
-}
+}; }
 
 // ============================================================================
 
-exports._initPRNG = (onError, onSuccess) => {
+function _initPRNG(onError, onSuccess) {
     let result = new Promise((resolve, reject) => {
         setTimeout(() => {
             console.log("INIT PRNG");
@@ -45,3 +45,8 @@ exports._initPRNG = (onError, onSuccess) => {
 }    
 
 // ============================================================================
+
+export {
+	  _randomBytes
+	, _initPRNG
+}

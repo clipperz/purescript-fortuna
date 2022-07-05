@@ -1,4 +1,23 @@
 let upstream =
-      https://github.com/purescript/package-sets/releases/download/psc-0.14.5-20220110/packages.dhall sha256:8dbf71bfc6c7a11043619eebe90ff85f7d884541048aa8cc48eef1ee781cbc0e
+      https://github.com/purescript/package-sets/releases/download/psc-0.15.2-20220630/packages.dhall
+        sha256:691aff166010760f18ab1f4842ba6184f43747756e00579a050a2a46fa22d014
 
 in  upstream
+	with arraybuffer =
+    { dependencies =
+      [ "arraybuffer-types"
+      , "arrays"
+      , "effect"
+      , "float32"
+      , "functions"
+      , "gen"
+      , "maybe"
+      , "nullable"
+      , "prelude"
+      , "tailrec"
+      , "uint"
+      , "unfoldable"
+      ]
+    , repo = "https://github.com/clipperz/purescript-arraybuffer"
+    , version = "clipperz"
+    }

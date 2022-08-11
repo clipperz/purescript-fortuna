@@ -1,9 +1,7 @@
 module Bytes where
 
 import Data.Show (class Show)
-import Data.ArrayBuffer.DataView (buffer)
--- import Data.ArrayBuffer.Typed (buffer)
-import Data.ArrayBuffer.Types (ArrayBuffer, Uint8Array, Uint8)
+import Data.ArrayBuffer.Types (ArrayBuffer, Uint8Array)
 
 foreign import _showBytes :: Uint8Array -> String
 -- foreign import _mapBytes :: forall b. (Byte -> b) -> Uint8Array -> Array b

@@ -5,7 +5,7 @@ function _randomByte () {
 }
 
 // ============================================================================
-const gratuitousTimeout = 100;
+const gratuitousTimeout = 1;
 // const gratuitousTimeout = 500;
 
 function _randomBytes(n) { return (onError, onSuccess) => {
